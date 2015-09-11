@@ -14,7 +14,7 @@ class Chapter < ActiveRecord::Base
 
     mc = MarkovChain.new(content)
     body = []
-    rand(1..3).times do
+    rand(2..6).times do
       body << mc.build_paragraph
     end
     self.body = body.join(' ')
