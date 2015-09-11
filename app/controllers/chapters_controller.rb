@@ -2,7 +2,7 @@ class ChaptersController < ApplicationController
   before_action :set_chapter, only: [:show, :edit, :update, :destroy]
 
   def index
-    @chapters = Chapter.all
+    @chapters = Chapter.order(created_at: :desc)
   end
 
   def new
