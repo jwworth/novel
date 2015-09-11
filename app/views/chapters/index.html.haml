@@ -2,7 +2,7 @@
   - if @chapters.any?
     - @chapters.each do |chapter|
       .chapter
-        .title= chapter.title
+        .title= "#{chapter.id}: #{chapter.title}"
         .body= simple_format chapter.body
   - else
     No chapters.
