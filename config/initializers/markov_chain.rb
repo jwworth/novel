@@ -1,11 +1,15 @@
-content = ''
+string = ''
 
 if Rails.env.production?
   Dir['lib/assets/books/*.txt'].each do |f|
-    content += File.read(f)
+    string += File.read(f)
   end
 else
-  content += File.read(Rails.root.join('lib', 'assets', 'books', 'siddhartha.txt'))
+  string += File.read(Rails.root.join('lib', 'assets', 'books', 'siddhartha.txt'))
 end
 
-MC = MarkovChain.new(content)
+# Strip Project Gutenberg-specific noise
+string.gsub!(/^[A-Z\s]+$/, '')
+string.gsub!(/http\S+/, '')
+
+MC = MarkovChain.new(string)

@@ -55,9 +55,5 @@ class MarkovChain
     string.gsub!(/"/, '')
     # Strip parens, they are hard to match
     string.gsub!(/\(|\)/, '')
-    # Strip all-caps notes and comments
-    string.gsub!(/^[A-Z\s]+$/, '')
-    # Strip hyperlinks
-    string.gsub!(/http\S+/, '')
   end
 end
