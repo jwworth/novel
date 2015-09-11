@@ -1,11 +1,12 @@
-$light-gray: #D3D3D3
 $gray: #808080
+$old-paper: #F8ECC2
 
 a
   color: black
   text-decoration: initial
 
 body
+  background: url('seamless_paper_texture.png')
   width: 900px
   margin: 0 auto
 
@@ -21,15 +22,16 @@ body
   .novel
     padding: 20px
     .chapter
-      border-bottom: 1px dashed $light-gray
       padding: 20px 0
+      &:not(:last-child)
+        border-bottom: 1px dashed $gray
       .title
         font-weight: bold
         margin: 10px 0
       .body
         margin-bottom: 20px
       .date
-        color: $light-gray
+        color: $gray
         font-style: italic
         font-size: 12px
         text-align: right
