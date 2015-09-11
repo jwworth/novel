@@ -1,7 +1,8 @@
-- if @chapters.any?
-  - @chapters.each do |chapter|
-    .chapter
-      .title= chapter.title
-      .body= chapter.body
-- else
-  No chapters.
+.novel
+  - if @chapters.any?
+    - @chapters.each do |chapter|
+      .chapter
+        .title= chapter.title
+        .body= chapter.body
+  - else
+    No chapters.
