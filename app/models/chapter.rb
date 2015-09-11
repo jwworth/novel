@@ -7,15 +7,9 @@ class Chapter < ActiveRecord::Base
   def build
     self.title = build_title
 
-    content = ''
-    Dir['lib/assets/books/*.txt'].each do |f|
-      content += File.read(f)
-    end
-
-    mc = MarkovChain.new(content)
     body = []
     rand(2..6).times do
-      body << mc.build_paragraph
+      body << MC.build_paragraph
     end
     self.body = body.join(' ')
   end
