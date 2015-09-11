@@ -1,4 +1,6 @@
 class MarkovChain
+  attr_accessor :markov_model
+
   def initialize(string)
     @markov_model = Hash.new { |hash, key| hash[key] = [] }
     prepare!(string)
@@ -51,7 +53,11 @@ class MarkovChain
     string.gsub!(/\s+/, ' ')
     # String double quotes, they are hard to match
     string.gsub!(/"/, '')
+    # String parens, they are hard to match
+    string.gsub!(/\(|\)/, '')
     # Strip all-caps notes and comments
     string.gsub!(/^[A-Z\s]+$/, '')
+    # Strip hyperlinks
+    string.gsub!(/http\S+/, '')
   end
 end
