@@ -4,5 +4,6 @@
       .chapter
         .title= "#{chapter.id}: #{chapter.title}"
         .body= simple_format chapter.body
+        .date= chapter.created_at.strftime('%b %d, %Y')
   - else
     No chapters.

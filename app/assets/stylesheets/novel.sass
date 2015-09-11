@@ -1,3 +1,6 @@
+$light-gray: #D3D3D3
+$gray: #808080
+
 a
   color: black
   text-decoration: initial
@@ -13,18 +16,19 @@ body
       font-size: 80px
     h3
       font-family: sans-serif
-      color: #D3D3BE
+      color: $gray
 
   .novel
     padding: 20px
     .chapter
-      border-bottom: 1px solid #D3D3D3
-      margin: 20px 0
+      border-bottom: 1px dashed $light-gray
+      padding: 20px 0
       .title
-        font-style: italic
         font-weight: bold
         margin: 10px 0
       .body
         margin-bottom: 20px
-
-
+      .date
+        color: $light-gray
+        font-style: italic
+        font-size: 12px
