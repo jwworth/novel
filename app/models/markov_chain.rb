@@ -11,22 +11,6 @@ class MarkovChain
     end
   end
 
-  private
-
-  def add_triad(pair, match)
-    @markov_model[pair] = {} unless @markov_model[pair]
-    @markov_model[pair] += [match]
-  end
-
-  def prepare!(string)
-    # Strip excessives spaces
-    string.gsub!(/\s+/, ' ')
-    # String double quotes, they are hard to match
-    string.gsub!(/"/, '')
-    # Strip all-caps notes and comments
-    string.gsub!(/^[A-Z\s]+$/, '')
-  end
-
   def build_paragraph(sentences=5)
     paragraph = []
 
@@ -53,5 +37,21 @@ class MarkovChain
     end
 
     output.join(' ').squeeze(' ').gsub(/\s+([,.!?])/, '\1')
+  end
+
+  private
+
+  def add_triad(pair, match)
+    @markov_model[pair] = {} unless @markov_model[pair]
+    @markov_model[pair] += [match]
+  end
+
+  def prepare!(string)
+    # Strip excessives spaces
+    string.gsub!(/\s+/, ' ')
+    # String double quotes, they are hard to match
+    string.gsub!(/"/, '')
+    # Strip all-caps notes and comments
+    string.gsub!(/^[A-Z\s]+$/, '')
   end
 end

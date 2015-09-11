@@ -1,5 +1,5 @@
 - if @chapters.any?
-  = @chapters.each do |chapter|
+  - @chapters.each do |chapter|
     .chapter
       .title= chapter.title
       .body= chapter.body
