@@ -15,6 +15,11 @@ class Chapter < ActiveRecord::Base
   end
 
   def build_title
-    %w(assist betrayal yoink).sample.upcase
+    title = []
+    @nouns ||= File.read(Rails.root.join('lib', 'assets', 'nounlist.txt')).split(' ')
+    rand(1..2).times do
+      title << @nouns.sample
+    end
+    title.join(' ').upcase
   end
 end
