@@ -3,10 +3,12 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %link(href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css')
-    %title NOVEL
+    %title HOLIDAY MORNING
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %h1= link_to 'NOVEL', root_path
+    %header
+      %h1= link_to 'HOLIDAY MORNING', root_path
+      %h3 A novel (in progress) by Ellis Champlin
     = yield
