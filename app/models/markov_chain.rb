@@ -51,9 +51,9 @@ class MarkovChain
   def prepare!(string)
     # Strip excessives spaces
     string.gsub!(/\s+/, ' ')
-    # String double quotes, they are hard to match
+    # Strip double quotes, they are hard to match
     string.gsub!(/"/, '')
-    # String parens, they are hard to match
+    # Strip parens, they are hard to match
     string.gsub!(/\(|\)/, '')
     # Strip all-caps notes and comments
     string.gsub!(/^[A-Z\s]+$/, '')
