@@ -1,5 +1,6 @@
 class Chapter < ActiveRecord::Base
-  before_create :build
+  validates_presence_of :title, :body
+  before_validation :build
 
   private
 
