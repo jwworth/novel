@@ -3,6 +3,6 @@
     - @chapters.each do |chapter|
       .chapter
         .title= chapter.title
-        .body= chapter.body
+        .body= simple_format chapter.body
   - else
     No chapters.
