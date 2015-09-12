@@ -1,9 +1,9 @@
 .novel
   - if @chapters.any?
     - @chapters.each do |chapter|
-      .chapter
+      %article
         .title= "#{chapter.id}: #{chapter.title}"
         .body= simple_format chapter.body
-        .date= chapter.created_at.strftime('%B %d, %Y')
+        %time= chapter.created_at.strftime('%B %d, %Y')
   - else
     No chapters.

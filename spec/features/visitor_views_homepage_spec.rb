@@ -6,7 +6,7 @@ describe 'Visitor views homepage', type: :feature do
       FactoryGirl.create_list(:chapter, 3)
       visit root_path
 
-      expect(page).to have_selector('.chapter', count: 3)
+      expect(page).to have_selector('article', count: 3)
       expect(page).to have_selector('.body', count: 3)
       expect(page).to have_selector('.title', count: 3)
     end
@@ -17,7 +17,7 @@ describe 'Visitor views homepage', type: :feature do
       visit root_path
 
       expect(page).to have_content('No chapters.')
-      expect(page).to_not have_selector('.chapter')
+      expect(page).to_not have_selector('article')
       expect(page).to_not have_selector('.body')
       expect(page).to_not have_selector('.title')
     end
