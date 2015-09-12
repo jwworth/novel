@@ -39,6 +39,9 @@ GEM
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bourbon (4.2.2)
+      sass (~> 3.4)
+      thor
     builder (3.2.2)
     byebug (6.0.2)
     capybara (2.4.4)
@@ -207,6 +210,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon
   byebug
   capybara
   coffee-rails (~> 4.1.0)
