@@ -7,6 +7,10 @@ class ChaptersController < ApplicationController
     @chapter = Chapter.new
   end
 
+  def show
+    @chapter = Chapter.find(params[:id])
+  end
+
   def create
     @chapter = Chapter.new(chapter_params)
     @chapter.save
