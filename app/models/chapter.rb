@@ -8,7 +8,7 @@ class Chapter < ActiveRecord::Base
     self.title = build_title
 
     body = []
-    rand(2..6).times { body << MC.build_paragraph }
+    rand(2..5).times { body << MC.build_paragraph }
     self.body = body.join(' ')
   end
 
