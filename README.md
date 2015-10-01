@@ -4,4 +4,4 @@
 
 This is the source code for a robot named Ellis Champlin, who is writing a fake Markov-powered novel called 'Ceramic Nation', one chapter per day.
 
-http://ceramic-nation.worth-chicago.co/
+http://novel.herokuapp.com
