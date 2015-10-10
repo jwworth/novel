@@ -6,16 +6,15 @@ class Chapter < ActiveRecord::Base
 
   def build
     self.title = build_title
-
-    body = []
-    rand(2..5).times { body << MC.build_paragraph }
-    self.body = body.join(' ')
+    self.body = rand(2..5).times.map do
+      MC.build_paragraph
+    end.join(' ')
   end
 
   def build_title
-    title = []
     @nouns ||= File.read(Rails.root.join('lib', 'assets', 'nounlist.txt')).split(' ')
-    rand(1..2).times { title << @nouns.sample }
-    title.join(' ').upcase
+    rand(1..2).times.map do
+      @nouns.sample
+    end.join(' ').upcase
   end
 end
