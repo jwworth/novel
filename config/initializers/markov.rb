@@ -12,4 +12,4 @@ end
 string.gsub!(/^[A-Z\s]+$/, '')
 string.gsub!(/http\S+/, '')
 
-MC = MarkovChain.new(string)
+MARKOV = Remarkovable.new(string: string)

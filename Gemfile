@@ -11,6 +11,7 @@ gem "haml-rails", "~> 0.9"
 gem 'puma'
 gem 'rails_12factor'
 gem 'bourbon'
+gem 'remarkovable', git: 'https://github.com/jwworth/remarkovable'
 
 gem 'turbolinks'
 gem 'jquery-rails'

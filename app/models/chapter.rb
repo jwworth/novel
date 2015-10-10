@@ -7,8 +7,15 @@ class Chapter < ActiveRecord::Base
   def build
     self.title = build_title
     self.body = rand(2..5).times.map do
-      MC.build_paragraph
+      build_paragraph
     end.join(' ')
+  end
+
+  def build_paragraph
+    sentences = rand(2..5)
+    sentences.times.map do
+      MARKOV.speak + ' '
+    end.join(' ') + "\n\n"
   end
 
   def build_title
