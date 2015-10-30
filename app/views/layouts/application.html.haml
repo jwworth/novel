@@ -2,19 +2,26 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+
     %link(href='https://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css')
     %link(href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css')
     %link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
+
     %title CERAMIC NATION
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     %header
-      %h1= link_to 'CERAMIC NATION', root_path
-      %h3 A novel-in-progress by Ellis Champlin; one(ish) chapter a day.
-    = yield
+      .container
+        %h1= link_to 'CERAMIC NATION', root_path
+        %h3 A novel-in-progress by Ellis Champlin; one(ish) chapter a day.
+    %main
+      .container
+        = yield
     %footer
-      created by
-      = link_to '@jwworth.', 'http://twitter.com/jwworth'
-      = link_to ' source code.', 'http://github.com/jwworth/novel'
+      .container
+        created by
+        = link_to '@jwworth.', 'http://twitter.com/jwworth'
+        = link_to ' source code.', 'http://github.com/jwworth/novel'

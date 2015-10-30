@@ -1,4 +1,4 @@
 %article
-  .title= link_to "#{chapter.id}: #{chapter.title}", chapter_path(chapter)
+  %h4.title= link_to "#{chapter.id}: #{chapter.title}", chapter_path(chapter)
   .body= simple_format chapter.body
   %time= chapter.created_at.strftime('%B %e, %Y')
