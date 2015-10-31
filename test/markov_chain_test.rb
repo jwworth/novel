@@ -2,7 +2,6 @@ require 'minitest/autorun'
 require './app/models/markov_chain.rb'
 
 class MarkovChainTest < Minitest::Test
-
   def test_add_pair_simple_case
     content = 'we are walking'
     mc = MarkovChain.new(content)
@@ -50,7 +49,7 @@ class MarkovChainTest < Minitest::Test
     content = 'we are walking we are talking we are walking.'
     mc = MarkovChain.new(content)
     expected_output = {
-      'we are' => ['walking', 'talking', 'walking'],
+      'we are' => %w(walking talking walking),
       'are walking' => ['we', '.'],
       'walking we' => ['are'],
       'are talking' => ['we'],
@@ -64,7 +63,7 @@ class MarkovChainTest < Minitest::Test
     content = "we are walking\n\rwe are talking we are walking."
     mc = MarkovChain.new(content)
     expected_output = {
-      'we are' => ['walking', 'talking', 'walking'],
+      'we are' => %w(walking talking walking),
       'are walking' => ['we', '.'],
       'walking we' => ['are'],
       'are talking' => ['we'],

@@ -9,9 +9,7 @@ class ChaptersController < ApplicationController
 
   def create
     @chapter = Chapter.new(chapter_params)
-    if @chapter.save
-      redirect_to root_path
-    end
+    redirect_to root_path if @chapter.save
   end
 
   private
