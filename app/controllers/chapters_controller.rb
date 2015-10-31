@@ -3,17 +3,15 @@ class ChaptersController < ApplicationController
     @chapters = Chapter.order(created_at: :desc)
   end
 
-  def new
-    @chapter = Chapter.new
-  end
-
   def show
     @chapter = Chapter.find(params[:id])
   end
 
   def create
     @chapter = Chapter.new(chapter_params)
-    @chapter.save
+    if @chapter.save
+      redirect_to root_path
+    end
   end
 
   private

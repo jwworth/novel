@@ -34,3 +34,6 @@ group :development do
   gem 'bullet'
 end
 
+group :test do
+  gem 'simplecov', require: false
+end
