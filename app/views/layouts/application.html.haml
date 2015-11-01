@@ -15,8 +15,8 @@
   %body
     %header
       .container
-        %h1= link_to 'CERAMIC NATION', root_path
-        %h3 A novel-in-progress by Ellis Champlin; one(ish) chapter a day.
+        %h1= link_to SITE_NAME.upcase, root_path
+        %h3= SITE_DESCRIPTION
     %main
       .container
         = yield
