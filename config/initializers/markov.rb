@@ -1,11 +1,7 @@
-string = ''
-
-if Rails.env.production?
-  Dir['lib/assets/books/*.txt'].each do |f|
-    string += File.read(f)
-  end
+string = if Rails.env.production?
+  Dir['lib/assets/books/*.txt'].map { |f| File.read(f) }.join
 else
-  string += File.read(Rails.root.join('lib', 'assets', 'books', 'siddhartha.txt'))
+  File.read(Rails.root.join('lib', 'assets', 'books', 'siddhartha.txt'))
 end
 
 # Strip Project Gutenberg-specific noise
