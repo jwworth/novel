@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'haml-rails', '~> 0.9'
 gem 'puma'
 gem 'rails_12factor'
-gem 'remarkovable', git: 'https://github.com/jwworth/remarkovable'
+gem 'remarkovable'
 
 gem 'turbolinks'
 gem 'jquery-rails'
