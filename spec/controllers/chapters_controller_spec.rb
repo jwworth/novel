@@ -4,7 +4,7 @@ describe ChaptersController do
   describe '#create' do
     it 'creates a chapter' do
       expect do
-        post :create, chapter: FactoryGirl.attributes_for(:chapter)
+        post :create, params: { chapter: { title: 'Foo', body: 'bar' } }
       end.to change(Chapter, :count).by(1)
     end
   end

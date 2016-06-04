@@ -1,23 +1,22 @@
 source 'https://rubygems.org'
 
 ruby '2.3.1'
+gem 'rails', '5.0.0.rc1'
 
-gem 'pg'
-gem 'rails', '4.2.6'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'factory_girl_rails'
+gem 'haml'
 gem 'haml-rails', '~> 0.9'
+gem 'jbuilder', '~> 2.0'
+gem 'jquery-rails'
+gem 'pg'
 gem 'puma'
 gem 'rails_12factor', group: :production
 gem 'remarkovable'
-
-gem 'turbolinks'
-gem 'jquery-rails'
-gem 'jbuilder', '~> 2.0'
+gem 'sass-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'factory_girl_rails'
-gem 'haml'
+gem 'turbolinks'
+gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug'
