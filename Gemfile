@@ -5,7 +5,6 @@ gem 'rails', '5.0.0.rc1'
 
 gem 'coffee-rails', '~> 4.1.0'
 gem 'factory_girl_rails'
-gem 'haml'
 gem 'haml-rails', '~> 0.9'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
@@ -26,10 +25,9 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-  gem 'phil'
   gem 'bullet'
+  gem 'phil'
+  gem 'spring'
 end
 
 group :test do
