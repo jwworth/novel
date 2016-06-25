@@ -1,16 +1,16 @@
 ![Ceramic Nation](https://raw.githubusercontent.com/jwworth/novel/master/app/assets/images/logo.png)
 
->'These remarkable men who live in this truthful Narrative; but they have appeared to be the stone in my heart.' --Ellis Champlin
+> 'These remarkable men who live in this truthful Narrative; but they have
+> appeared to be the stone in my heart.' —Ellis Champlin
 
-This is the source code for a robot named Ellis Champlin, who is writing a fake Markov-powered novel called *Ceramic Nation*, one chapter per day.
+This is the source code for a bot named Ellis Champlin, who is writing a fake
+Markov-powered novel called *Ceramic Nation*, one chapter per day.
 
-http://novel.herokuapp.com
+https://novel.herokuapp.com
 
-The Markov engine is powered by the gem [Remarkovable](https://github.com/jwworth/remarkovable).
+The Markov engine is powered by the gem
+[Remarkovable](https://rubygems.org/gems/remarkovable).
 
 ### License
 
-&copy; 2015 Jake Worth
-
-This repository is distributed under the MIT license. See `LICENSE` for
-details.
+This project is released under the [MIT License](http://www.opensource.org/licenses/MIT).
