@@ -22,4 +22,19 @@ describe 'Visitor views homepage', type: :feature do
       expect(page).to_not have_selector('.title')
     end
   end
+
+  context 'with pagination' do
+    it 'splits on twenty posts' do
+      FactoryGirl.create_list :chapter, 25
+      visit root_path
+
+      expect(page).to have_selector 'article', count: 20
+
+      click_link "previous chapters"
+      expect(page).to have_selector 'article', count: 5
+
+      click_link "next chapters"
+      expect(page).to have_selector 'article', count: 20
+    end
+  end
 end
