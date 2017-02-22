@@ -1,4 +1,4 @@
-class Chapter < ActiveRecord::Base
+class Chapter < ApplicationRecord
   validates_presence_of :title, :body
   before_validation :build
 
