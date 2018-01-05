@@ -1,6 +1,6 @@
 ![Ceramic Nation](https://raw.githubusercontent.com/jwworth/novel/master/app/assets/images/logo.png)
 
-[![Circle CI](https://circleci.com/gh/jwworth/novel.svg?style=svg)
+![Circle CI](https://circleci.com/gh/jwworth/novel.svg?style=svg)
 
 > 'These remarkable men who live in this truthful Narrative; but they have
 > appeared to be the stone in my heart.' —Ellis Champlin
