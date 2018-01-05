@@ -1,6 +1,6 @@
 default: &default
   adapter: postgresql
-  enoding: unicode
+  encoding: unicode
   pool: 5
 
 development:
@@ -14,5 +14,3 @@ test:
 production:
   <<: *default
   database: novel_production
-  username: novel
-  password: <%= ENV['NOVEL_PRODUCTION_PASSWORD'] %>
