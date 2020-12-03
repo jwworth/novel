@@ -24,5 +24,7 @@
     %footer
       .container
         created by
-        = link_to '@jwworth.', 'http://twitter.com/jwworth'
-        = link_to ' source code.', 'http://github.com/jwworth/novel'
+        = succeed "." do
+          = link_to '@jwworth', 'http://twitter.com/jwworth'
+        = succeed "." do
+          = link_to 'source code', 'http://github.com/jwworth/novel'
