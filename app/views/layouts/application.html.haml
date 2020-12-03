@@ -8,10 +8,11 @@
     %link(href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css')
     %link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
 
-    %title CERAMIC NATION
+    %title= SITE_NAME.upcase
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+
   %body
     %header
       .container
