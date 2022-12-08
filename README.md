@@ -1,7 +1,7 @@
 ![Ceramic Nation](https://raw.githubusercontent.com/jwworth/novel/master/app/assets/images/logo.png)
 
-> 'These remarkable men who live in this truthful Narrative; but they have >
-appeared to be the stone in my heart.'
+> 'These remarkable men who live in this truthful Narrative; but they have
+> appeared to be the stone in my heart.'
 —Ellis Champlin
 
 This is the source code for a bot named Ellis Champlin, who is writing a fake
